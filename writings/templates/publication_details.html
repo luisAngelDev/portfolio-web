@@ -1,0 +1,20 @@
+
+{% extends "master.html" %}
+{% block title %}
+  Details about
+{% endblock %}
+
+
+{% block content %}
+
+<h1>publication</h1>
+
+<div class="mycard">
+  <h1>title: {{ mypublication.title }} </h1>
+  <h3>date: {{mypublication.date}}</h3>
+  <p>description: {{ mypublication.description }}</p>
+  <img src="{{mypublication.image.url}}" alt="hjh" width="200" height="150" >
+
+</div>
+  
+{% endblock %}

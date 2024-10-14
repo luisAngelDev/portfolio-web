@@ -1,0 +1,33 @@
+<!-- <div class="topnav">
+    <a href="/">HOME</a> |
+    <a href="/projects">PROJECTS</a> |
+    <a href="/writings">WRITING</a> |
+    <a href="/speacking">SPEACKING</a>
+</div> -->
+{% load static %}
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="/">LUIS RAMOS</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mynavbar">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/writings">Writigns</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/">Speacking</a>
+          </li>
+
+          <li class="nav-item d-flex align-items-center" ></li>
+            <a class="btn btn-primary" href="{% static 'banner/CV-RAMOS-REYES-LUIS.pdf' %}" target="_blank">download cv</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>

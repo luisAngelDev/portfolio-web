@@ -1,0 +1,23 @@
+{% extends "master.html" %}
+
+{% block title %}
+  publicaciones
+{% endblock %}
+
+
+{% block content %}
+
+<div class="mycard">
+  <h1>WRITING </h1>
+  
+    {% for x in mypublications %}
+
+    <a href="{% url 'publication_details' x.id %}">Ver detalles de {{ x.title }}</a>
+      <h3>{{x.date|date:'M d Y'|upper}}</h3>
+      <p>{{x.description}}</p>
+      <img src="{{ x.image.url }}" alt="kjdhfh" width="200" height="150">
+
+    {% endfor %}
+  
+
+{% endblock %}

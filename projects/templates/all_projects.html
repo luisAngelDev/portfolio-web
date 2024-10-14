@@ -1,0 +1,26 @@
+
+{% extends "master.html" %}
+
+{% block title %}
+  listo a todos
+{% endblock %}
+
+
+{% block content %}
+
+<div class="mycard">
+  <h1>Projects </h1>
+  <ul>
+    {% for x in myprojects %}
+      <li onclick="window.location = 'details/{{ x.id }}'">{{ x.title }}</li>
+      <p>{{x.description |truncatechars:100 }}</p>
+      <img src="{{ x.image.url }}" alt="kjdhfh" width="200" height="150">
+
+      {% if x.url %}
+        <a href="{{x.url}}">{{x.url}}</a>
+      {% endif %}
+
+    {% endfor %}
+  </ul>
+
+{% endblock %}

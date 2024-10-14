@@ -1,0 +1,16 @@
+
+{% extends "master.html" %}
+{% block title %}
+  Details about {{ myproject.title }}
+{% endblock %}
+
+
+{% block content %}
+<div class="mycard">
+  <h1>{{ myproject.title }} </h1>
+  <p>description {{ myproject.description }}</p>
+  <img src="{{myproject.image.url}}" alt="hjh" width="200" height="150" >
+  <p>Member since: {{ myproject.url }}</p>
+</div>
+  
+{% endblock %}
