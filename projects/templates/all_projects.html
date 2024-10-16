@@ -8,19 +8,39 @@
 
 {% block content %}
 
-<div class="mycard">
-  <h1>Projects </h1>
-  <ul>
+
+
+<div class="container">
+  <h2 class="mt-5">Projects </h2>
+  
+  <div class="row my-4 text-center">
+
     {% for x in myprojects %}
-      <li onclick="window.location = 'details/{{ x.id }}'">{{ x.title }}</li>
-      <p>{{x.description |truncatechars:100 }}</p>
-      <img src="{{ x.image.url }}" alt="kjdhfh" width="200" height="150">
+    <div class="col-lg-4 col-md-6 col-sm-6 p-4" >
 
-      {% if x.url %}
-        <a href="{{x.url}}">{{x.url}}</a>
-      {% endif %}
+      <div class="card ">
+        <img src="{{ x.image.url }}" alt="kjdhfh"  width="250" height="220" class="card-img-top"/>
 
+        <div class="card-body">
+          <a href="{% url 'details' x.id %}">{{ x.title }}</a>
+          <p>{{x.description |truncatechars:80 }}</p>
+          
+        
+          {% if x.url %}
+            <a href="{{x.url}}" class="btn btn-light btn-sm" target="_blank">Github</a>
+          {% endif %}
+
+        </div>        
+      </div>
+    </div>
     {% endfor %}
-  </ul>
+
+  </div>
+
+  
+</div>
+
+ 
+  
 
 {% endblock %}
