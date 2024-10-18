@@ -1,8 +1,13 @@
 body{
-    background: #202020;
+    background-color: #202020;
 }
 
 .card-project:hover{
     border: 1px solid #fff;
     cursor: pointer;
 }
+
+.fakeimg {
+    height: 300px;
+    background: #aaa;
+  }

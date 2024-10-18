@@ -1,4 +1,5 @@
 {% extends "master.html" %}
+{% load static %}
 
 {% block title %}
   my portfolio 
@@ -7,24 +8,92 @@
 
 {% block content %}
 
+<div class="">
 
-<div class="container mt-3">
+  <div class="container py-5 text-white" >
 
-  <div class="row">
+    <section class="row py-5" >
+  
+      <div class="col-sm-6 p-5" >
+        <h1>I am </h1>
+        <h1> Web Deleloper Full Stack</h1>
+        <p>contac me</p>
+      </div>
+  
+      <div class="col-sm-6 p-5" >
+        <p>About me</p>
+        <div class="fakeimg">Fake Image</div>
+      </div>
+  
+    </section>
 
-    <div class="column ">
-      
-    </div>
+    <section class="row text-center py-5 my-5" style="background-color: rgba(0, 0, 0, 0.2);">
+  
+      <h4 class="text-center py-5">
+        SERVICES
+      </h4>
 
+      <div class="col-sm">
+        <p>mobile app</p>
+        <div class="fakeimg">Fake Image</div>
+      </div>
+
+      <div class="col-sm">
+        <p>web programming</p>
+        <div class="fakeimg">Fake Image</div>
+      </div>
+
+      <div class="col-sm">
+        <p>api service</p>
+        <div class="fakeimg">Fake Image</div>
+      </div>
+  
+    </section>
+
+    <section class="row py-5 my-5" >
+
+      <h4 class="text-center ">ABOUT ME</h4>
+
+      <div class="col-sm-6 p-5" >
+        <h3>&lt;&gt;</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis hic, 
+          maiores excepturi tenetur ea velit provident dolore voluptates eos omnis. 
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis necessitatibus 
+          maxime ullam sint quas esse vel nostrum, explicabo odio at ratione quis, rerum aut. 
+          Corporis ab rerum atque doloremque porro!
+        </p>
+        <h3>&lt;/&gt;</h3>
+      </div>
+  
+      <div class="col-sm-6 p-5">
+        <p>About me</p>
+        <div class="fakeimg">Fake Image</div>
+      </div>
+  
+    </section>
+
+    <section class="row py-5 my-5" style="background-color: rgba(0, 0, 0, 0.2);">
+
+      <h4 class="text-center ">CONTACT ME</h4>
+
+      <div class="col-sm-8 p-5" >
+        <h1>I am </h1>
+        <h2> Web Deleloper Full Stack</h2>
+        <p>contac me</p>
+      </div>
+  
+      <div class="col-sm-4 p-5">
+        <p>About me</p>
+        <div class="fakeimg">Fake Image</div>
+      </div>
+  
+    </section>
+
+    
+    
   </div>
-  <!-- { include 'partials/caroucel.html' } -->
-
-  <h1>My personal portfolio</h1>
-
-  <h3>Projects</h3>
-
-  <p>Check out all our <a href="projects/">Projects</a></p>
 
 </div>
+
   
 {% endblock %}
