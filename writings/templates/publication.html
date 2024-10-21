@@ -7,17 +7,29 @@
 
 {% block content %}
 
-<div class="mycard">
-  <h1>WRITING </h1>
-  
-    {% for x in mypublications %}
 
-    <a href="{% url 'publication_details' x.id %}">Ver detalles de {{ x.title }}</a>
-      <h3>{{x.date|date:'M d Y'|upper}}</h3>
-      <p>{{x.description}}</p>
-      <img src="{{ x.image.url }}" alt="kjdhfh" width="200" height="150">
+<section class="container">
 
-    {% endfor %}
-  
+  <h3 class="my-5">WRITING </h3>
+
+  {% for x in mypublications %}
+  <article class="row my-5 px-5">
+    
+    <div class="col-lg-3 col-md-4 col-sm-12">
+      <h6>{{x.date|date:'M d Y'|upper}}</h6>
+      <img src="{{ x.image.url }}" alt="kjdhfh" width="150" height="100">
+    </div>
+
+    <div class="col-lg-9 col-md-8 col-sm-12 my-3">
+      <h4>{{ x.title }}</h4>
+      <p>{{x.description|truncatechars:180}}</p>
+      <a class="btn btn-primary btn-sm" href="{% url 'publication_details' x.id %}">leer mas ... </a>
+    </div>
+
+  </article>
+  {% endfor %}
+
+</section>
+
 
 {% endblock %}

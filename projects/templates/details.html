@@ -6,11 +6,28 @@
 
 
 {% block content %}
-<div class="mycard">
-  <h1>{{ myproject.title }} </h1>
-  <p>description {{ myproject.description }}</p>
-  <img src="{{myproject.image.url}}" alt="hjh" width="200" height="150" >
-  <p>Member since: {{ myproject.url }}</p>
-</div>
   
+<section class="container">
+
+  <h3 class="my-5">proyectos </h3>
+
+  <article class="row my-5 px-5">
+
+    <h1 class="mb-4">{{ myproject.title }} </h1>
+    <div class="col-md-9 col-sm-12 mb-4">
+    
+      <p>{{ myproject.description }}</p>
+      <a href="{{myproject.url}}" class="btn btn-light btn-sm" target="_blank">ir a demo </a>
+
+    </div>
+
+    <div class="col-md-3 col-sm-12">
+      <img src="{{myproject.image.url}}" alt="hjh" width="200" height="150" >
+    </div>
+
+  </article>
+
+</section>
+
+
 {% endblock %}

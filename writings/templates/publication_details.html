@@ -7,14 +7,30 @@
 
 {% block content %}
 
-<h1>publication</h1>
 
-<div class="mycard">
-  <h1>title: {{ mypublication.title }} </h1>
-  <h3>date: {{mypublication.date}}</h3>
-  <p>description: {{ mypublication.description }}</p>
-  <img src="{{mypublication.image.url}}" alt="hjh" width="200" height="150" >
 
-</div>
+
+<section class="container">
+
+  <h3 class="my-5">publicacion </h3>
+
+  <article class="row my-5 px-5">
+
+    <h1 class="mb-4">{{ mypublication.title }} </h1>
+    
+    <div class="col-md-9 col-sm-12">
+    
+      <p>{{ mypublication.description }}</p>
+      <h6>{{mypublication.date}}</h6>
+
+    </div>
+
+    <div class="col-md-3 col-sm-12 my-4">
+      <img src="{{mypublication.image.url}}" alt="hjh" width="200" height="150" >
+    </div>
+
+  </article>
+
+</section>
   
 {% endblock %}

@@ -22,7 +22,7 @@
         <img src="{{ x.image.url }}" alt="kjdhfh"  width="250" height="220" class="card-img-top"/>
 
         <div class="card-body">
-          <a href="{% url 'details' x.id %}">{{ x.title }}</a>
+          <a class="btn" href="{% url 'details' x.id %}">{{ x.title }}</a>
           <p>{{x.description |truncatechars:80 }}</p>
           
         
